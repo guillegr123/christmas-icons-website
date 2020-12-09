@@ -1,0 +1,35 @@
+---
+# front matter tells Jekyll to process Liquid
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .image {
+            display: block;
+            height: 256px;
+            margin: 0.5rem;
+            padding: 0.5rem;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    {% for image in site.collections[0].files %}
+        <img class="image" src="images/{{ image.name }}" />
+    {% endfor %}
+    </div>
+</body>
+
+</html>
