@@ -38,6 +38,8 @@ collections:
   images:
     label: Icons
     output: true
+  selected:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
