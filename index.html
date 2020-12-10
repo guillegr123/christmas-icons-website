@@ -17,9 +17,17 @@
         .image {
             display: block;
             height: 256px;
+        }
+
+        a {
+            display: block;
             margin: 0.5rem;
             padding: 0.5rem;
             border: 2px solid black;
+        }
+
+        a:visited {
+            color: red;
         }
     </style>
 </head>
@@ -27,7 +35,9 @@
 <body>
     <div class="container">
     {% for image in site.collections[0].files %}
-        <img class="image" src="images/{{ image.name }}" />
+        <a target="blank" href="images/{{ image.name }}">
+            <img class="image" src="images/{{ image.name }}" />
+        </a>
     {% endfor %}
     </div>
 </body>
